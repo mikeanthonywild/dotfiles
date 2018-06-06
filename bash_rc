@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+export PATH="/usr/local/sbin:$PATH"
+
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+if [ "$(uname)" == "Darwin" ]; then
+    # git completion for macOS requires `brew install git bash-completion`
+    if [ -f $(brew --prefix)/etc/bash_completion ]; then
+        . $(brew --prefix)/etc/bash_completion
+    fi
+else
+    # TODO: Source Linux bash completion
+    # git completion for Linux requires https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
+    :
+fi
+
+export PS1='\u \W$(__git_ps1 " (%s)") ~ \$ '
