@@ -10,3 +10,8 @@ set number
 
 " Language-specific settings
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
+
+" Local overrides
+if filereadable("~/.vimrc.local")
+    source ~/.vimrc.local
+endif
