@@ -1,3 +1,9 @@
+" Pathogen plugin support
+execute pathogen#infect()
+
+" Not all Vims enable syntax by default
+syntax on
+
 " Indendtation settings
 filetype indent plugin on
 set tabstop=4
