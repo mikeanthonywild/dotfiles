@@ -1,6 +1,3 @@
-" Pathogen plugin support
-execute pathogen#infect()
-
 " Not all Vims enable syntax by default
 syntax on
 
