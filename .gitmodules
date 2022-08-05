@@ -1,0 +1,6 @@
+[submodule "vendor/git"]
+	path = vendor/git
+	url = git@github.com:git/git.git
+[submodule "vendor/solarized"]
+	path = vendor/solarized
+	url = git@github.com:altercation/solarized.git
